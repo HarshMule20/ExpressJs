@@ -17,7 +17,12 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use(adminroutes);
-app.use(shoprouters);
+app.use('/admin', adminroutes);
+app.use('/shop', shoprouters);
+
+// This is to handle the error (Page Not Found)
+app.use((req, res, next) => {
+    res.status(404).send("<h2> Oops!!!! Page Not Found</h2>")
+})
 
 app.listen(8080);
