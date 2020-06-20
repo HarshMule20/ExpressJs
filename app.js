@@ -1,6 +1,11 @@
 const express = require('express');
 
 const app = express();
+app.use('/', (req, res, next) => {
+    console.log('This middleware always runs');
+    next();
+})  //This function meant t run everytime if the request doesn't match any of the other urls, this will handle the 404 error if nothing detected
+
 app.use('/profile', (req, res, next) => {
     res.send('<h1> Add New Profile</h>')
 })
