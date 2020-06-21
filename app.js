@@ -18,9 +18,11 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/admin', adminroutes);
 app.use(shoprouters);
-
+ 
 // This is to handle the error (Page Not Found)
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, 'views', 'not_found.html'));
