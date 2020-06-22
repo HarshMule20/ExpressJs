@@ -11,9 +11,10 @@ const app = express();
 //     next();
 // });  //This function meant t run everytime if the request doesn't pass any url in the URI, 
 
+app.set('view engine', 'pug');
+app.set('views', 'views');
 
 // this middleware function is for parsing the request body!! 
-
 app.use(bodyParser.urlencoded({
     extended: false
 }));
@@ -25,7 +26,8 @@ app.use(shoprouters);
  
 // This is to handle the error (Page Not Found)
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', 'not_found.html'));
+    // res.status(404).sendFile(path.join(__dirname, 'views', 'not_found.html'));
+    res.status(404).render('not_found');
 })
 
 app.listen(8080);
