@@ -1,0 +1,38 @@
+extends layouts/basic.pug
+
+block css
+    link(rel="stylesheet", href="/css/product.css")
+
+block body
+    main 
+            if products.length > 0
+                .grid
+                    each product in products
+                        article.card.product-item
+                            header.card_header
+                                h1.product_title #{product.title}
+                            .card_image
+                                img(src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", alt="A Book")
+                            .card_content
+                                h2.product_price $19.99
+                                p.product_desc A very interesting book about so many even more cool stuffs
+                            .card_actions
+                                button.btn2 Add To Cart
+            else
+                h1 No Products Available
+
+//- <!DOCTYPE html>
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title #{doctitle}
+        
+//-     body
+//-         header.header
+//-             nav.nav
+//-                 ul.ul
+//-                     li.li
+//-                         a(href="/") Shop
+//-                     li.li
+//-                         a(href="/admin/add-product") Add Product
