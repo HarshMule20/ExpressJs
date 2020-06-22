@@ -1,29 +1,25 @@
-.form-group {
+.product-form {
     width: 20rem;
     max-width: 90%;
     margin: auto;
 }
 
-.form-control label,
-.form-control input {
-    display: block;
-    width: 100%;
+.product-item {
+    width: 20rem;
+    max-width: 95%;
 }
 
-.form-control input {
-    border: 2px solid black;
-    font: inherit;
-    border-radius: 2px;
-}
-.btn {
-    font: inherit;
-    margin: 5px 0px;
-    border: 1px solid black;
-    background: white;
-    border-radius: 3px; 
+.product_title {
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-.btn:hover {
-    background-color: yellow;
-    color:teal ;
+.product_price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.product_description {
+    text-align: center;
 }

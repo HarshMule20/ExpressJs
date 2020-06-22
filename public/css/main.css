@@ -1,7 +1,7 @@
 body {
     padding: 0px;
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .main {
@@ -36,6 +36,7 @@ body {
 }
 
 .li a {
+    font-size: 18px;
     text-decoration: none;
     color: white;
 }
@@ -44,6 +45,63 @@ body {
 .li a:active,
 .li a.active {
     color: black;
-    background-color: darkcyan;
     padding: 11px 2px;
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  .card {
+      margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  
+  .card_header,
+  .card_content {
+    padding: 1rem;
+  }
+  
+  .card_header h1,
+  .card_content h1,
+  .card_content h2,
+  .card_content p {
+    margin: 0;
+  }
+  
+  .card_image {
+    width: 100%;
+  }
+  
+  .card_image img {
+    width: 100%;
+  }
+  
+  .card_actions {
+      padding: 1rem;
+      text-align: center;
+  }
+  
+  .card_actions button,
+  .card_actions a {
+      margin: 0 0.25rem;
+  }
+  
+  .btn2 {
+    font: inherit;
+    border: 1px solid #00695c;
+    color: #00695c;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn2:hover,
+  .btn2:active {
+    background-color: #00695c;
+    color: white;
+  }
+  
