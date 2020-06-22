@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path')
 
-const adminroutes = require('./routings/admin');
+const admindata = require('./routings/admin');
 const shoprouters = require('./routings/shop');
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminroutes);
+app.use('/admin', admindata.router);
 app.use(shoprouters);
  
 // This is to handle the error (Page Not Found)
