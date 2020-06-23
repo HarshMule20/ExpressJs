@@ -13,7 +13,7 @@ router.get('/add-product', (req, res, next) => {
     // res.send('<h1> Add New Profile</h>')
     // res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
 
-    res.render('add-product', {pagetitle: 'Add Product', path: '/admin/add-product'});
+    res.render('add-product', {pagetitle: 'Add Product', path: '/admin/add-product', activeAddProduct: true});
 });
 
 //This middleware (app.use) always access whether it is POST or GET request {here is the new logic mentioned for too restrict it to just POST request}, for that just change the app.use to app.post
