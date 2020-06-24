@@ -1,7 +1,5 @@
-.form-group {
-    width: 20rem;
-    max-width: 90%;
-    margin: auto;
+.form-control {
+    margin: 1rem 0;
 }
 
 .form-control label,
@@ -16,15 +14,7 @@
     font: inherit;
     border-radius: 2px;
 }
-.btn {
-    font: inherit;
-    margin: 5px 0px;
-    border: 1px solid black;
-    background: white;
-    border-radius: 3px; 
-}
 
-.btn:hover {
-    background-color: yellow;
-    color:teal ;
+.form-control input:focus {
+    outline-color: #00695c;
 }
