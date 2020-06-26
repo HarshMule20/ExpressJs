@@ -18,14 +18,14 @@ exports.postaddproducts = (req, res, next) => {
 };
 
 exports.getproducts = (req, res, next) => {
-  const products = Product.fetchAll();
-  console.log("My Products: ", products);
-  res.render('shop', {
-    prods: products,
-    pageTitle: 'Shop',
-    path: '/',
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true
+  Product.fetchAll(products => {
+    res.render('shop', {
+      prods: products,
+      pageTitle: 'Shop',
+      path: '/',
+      hasProducts: products.length > 0,
+      activeShop: true,
+      productCSS: true
+    });
   });
 };
