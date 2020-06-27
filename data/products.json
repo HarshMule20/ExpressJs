@@ -1,1 +1,8 @@
-[{"title":"new product"},{"title":"my ebook"},{"title":"my new product"},{"title":"newestboot"},{"title":"my book"}]
+[
+    {
+        "title": "Wings Of Fire",
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81+TtwkJUNL.jpg",
+        "description": "This is a book written by Dr. Abdul Kalam",
+        "price": "34.45"
+    }
+]
