@@ -3,14 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 const p = path.join(
-    path.dirname(process.mainModule.filename), 
+    path.dirname(process.mainModule.filename),
     'data',
     'products.json'
 );
 
 const getProductsFromFile = data => {
     fs.readFile(p, (err, fileContent) => {
-        if (err){
+        if (err) {
             return data([]);
         }
         else {
@@ -20,8 +20,18 @@ const getProductsFromFile = data => {
 };
 
 module.exports = class Product {
-    constructor(model) {       //any random name can ne given to the arg
-        this.title = model;
+    // constructor(model, imgurl,desc, price) {
+    //     //any random name can ne given to the arg
+    //     //    here the title is the name of the field and model is the argument
+    //     this.title = model;
+    //     this.description = desc;
+    //     this.imageurl = imgurl;
+    //     this.price = price;
+    constructor(title, imageUrl, description, price) {
+        this.title = title;
+        this.imageUrl = imageUrl;
+        this.description = description;
+        this.price = price;
     }
 
     save() {
@@ -30,7 +40,7 @@ module.exports = class Product {
             products.push(this);
             fs.writeFile(p, JSON.stringify(products), (err) => {
                 console.log("Error message: ", err);
-            }); 
+            });
         });
         // fs.readFile(p, (err, fileContent) => {});
     }
