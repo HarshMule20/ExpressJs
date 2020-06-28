@@ -1,8 +1,1 @@
-[
-    {
-        "title": "Wings Of Fire",
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81+TtwkJUNL.jpg",
-        "description": "This is a book written by Dr. Abdul Kalam",
-        "price": "34.45"
-    }
-]
+[{"title":"Wings Of Fire","imageUrl":"https://images-na.ssl-images-amazon.com/images/I/81+TtwkJUNL.jpg","description":"This is a book written by the Former Chairman of ISRO & Prime MInister of India ","price":"23","id":"0.3834476630163519"},{"title":"Who Moved My Cheese","imageUrl":"https://upload.wikimedia.org/wikipedia/en/thumb/8/88/WhoMovedMyCheeseCover.jpg/220px-WhoMovedMyCheeseCover.jpg","description":"Who Moved My Cheese? An Amazing Way to Deal with Change in Your Work and in Your Life, published on September 8, 1998, is a motivational business fable.","price":"24","id":"0.31637136776087704"},{"title":"The Secret","imageUrl":"https://n3.sdlcdn.com/imgs/i/w/z/The-Secret-Hardcover-English-2006-SDL457658654-1-3e4b5.jpg","description":"The Secret is a best-selling 2006 self-help book by Rhonda Byrne, based on the earlier film of the same name. It is based on the belief of the law of attraction, which claims that thoughts can change a person's life directly.","price":"29","id":"0.13684264523301937"}]
