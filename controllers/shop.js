@@ -5,7 +5,7 @@ exports.getproducts = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('shop/product_list', {
       prods: products,
-      pageTitle: 'All productsShop',
+      pageTitle: 'All products Shop',
       path: '/products',
       // hasProducts: products.length > 0,
       // activeShop: true,
@@ -13,6 +13,22 @@ exports.getproducts = (req, res, next) => {
     });
   });
 };
+
+exports.getOneProduct = (req, res, next) => {
+  const product_id = req.params.pro_id;
+  // console.log("the product id: ", product_id);
+  Product.findbyid(product_id, product => {
+    console.log("the product: ", product.title)
+    res.render('shop/product_details', {
+      prods: product,
+      pageTitle: product.title,
+      path: '/products_details',
+      // hasProducts: products.length > 0,
+      // activeShop: true,
+      // productCSS: true
+    });
+  })
+}
 
 exports.getindex = (req, res, next) => {
   Product.fetchAll(products => {
