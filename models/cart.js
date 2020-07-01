@@ -38,4 +38,8 @@ module.exports = class Cart {
             });
         });
     }
+
+    static deleteProduct(id, product_price) {
+        
+    }
 };
