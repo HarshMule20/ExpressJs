@@ -5,4 +5,5 @@ const pool = new Pool({
     database : 'myshopdb',
     password : 'postgres',
     port : 5432,
+    username: "postgres"
 });
